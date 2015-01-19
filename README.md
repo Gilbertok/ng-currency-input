@@ -12,7 +12,7 @@ Main features:
 
 You may install it via bower using
 
-`bower install ng-currency`
+`bower install ng-currency-input`
 
 ## Example
 
@@ -27,14 +27,14 @@ You may see it in action and play a lot using [plunker](http://plnkr.co/edit/u9m
 >
 ``` html
 <script src="https://code.angularjs.org/1.2.16/angular.js"></script>
-<script src="http://aguirrel.github.io/ng-currency/dist/ng-currency.js"></script>
+<script src="http://github.com/Gilbertok/ng-currency-input/blob/master/dist/ng-currency-input.min.js"></script>
 ```
 
 + Inject the `ngCurrency` module into your app:
 
 >
 ``` JavaScript
-angular.module('myApp', ['ng-currency']);
+angular.module('myApp', ['ng-currency-input']);
 ```
 
 + In your input tag
