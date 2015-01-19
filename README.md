@@ -16,9 +16,9 @@ You may install it via bower using
 
 ## Example
 
-You may see it in action and play a lot using [plunker](http://plnkr.co/edit/u9mJqDH8UpwxDnOv8gZL?p=preview).
+You may see it in action and play a lot using [plunker](http://plnkr.co/edit/7Nx0E1se0VJ2gbGPG6p5?p=preview).
 
-<iframe width="100%" src="http://embed.plnkr.co/u9mJqDH8UpwxDnOv8gZL/preview" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" src="http://plnkr.co/edit/7Nx0E1se0VJ2gbGPG6p5?p=preview" frameborder="0" allowfullscreen></iframe>
 
 ## Quick start
 
