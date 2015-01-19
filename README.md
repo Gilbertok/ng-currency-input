@@ -14,12 +14,6 @@ You may install it via bower using
 
 `bower install ng-currency-input`
 
-## Example
-
-You may see it in action and play a lot using [plunker](http://plnkr.co/edit/7Nx0E1se0VJ2gbGPG6p5?p=preview).
-
-<iframe width="100%" src="http://plnkr.co/edit/7Nx0E1se0VJ2gbGPG6p5?p=preview" frameborder="0" allowfullscreen></iframe>
-
 ## Quick start
 
 + Include the required libraries:
