@@ -73,24 +73,12 @@ Please submit all pull requests the against master branch. If your unit test con
 
 ## Authors
 
-**Luis Aguirre**
+**Gilberto Kolacki**
 
-+ http://alaguirre.com
-+ http://github.com/aguirrel
++ http://github.com/Gilbertok
 
-## Contributors
-
-**Guillermo Sandoval**
-
-+ https://github.com/gsandoval
-
-**Ronaldo Rogério Pereira**
-
-+ https://github.com/ronaldotijucas
 
 ## Copyright and license
-
-	The MIT License
 
 	Copyright (c) 2012 - 2014 Olivier Louvignes
 
