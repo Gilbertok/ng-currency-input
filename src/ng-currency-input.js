@@ -16,17 +16,37 @@ angular.module('ng-currency-input', [])
             
             link: function (scope, element, attrs, ctrl) {
 
-                function formatPreco(valor) {
-                    
-                    var scale = 2;
-                    var formated = "";
+                var padraoInt = /^-?[0-9]+$/
+                var padraoFloat = /^-?[0-9]+.[0-9]+$/
 
-                    if (valor == null) {
+                function unformat(valor) {
+                    if (valor != null){
+                        if (typeof valor is "number" and valor.toString().length is 1){
+                            valor = valor.toString() + "00"
+                        } else if (typeof valor is "number" and valor.toString().indexOf(".") >= 0) {
+                            parse = valor.toString().split(".")
+                            if (parse[1].length is 1) {
+                                valor = valor.toString() + "0"
+                            }
+                            valor = valor.toString().replace(".","")
+                        } else if (typeof valor is "number"){
+                            valor = valor.toString() + "00"
+                        } else {
+                            valor = valor.toString().replace(",", "")
+                            valor = parseFloat(valor.toString()).toString()
+                            valor = valor.replace(".","")
+                        }
+                    return valor;
+                }
+
+                function formatPreco(valor) {
+                    if (valor == null || padraoInt.test(valor) || padraoFloat.test(valor)) {
                         return "0,00";
                     }
+                    var scale = 2;
+                    var formated = "";
+                    var thousandsCount = 0;
                     valor = unformat(valor);
-
-                    thousandsCount = 0;
 
                     for (var i = valor.length - 1; i >= 0; i--) {
                         var campo = valor.substr(i, 1);
@@ -57,37 +77,14 @@ angular.module('ng-currency-input', [])
                     if (formated.length === 1) {
                         formated = "0,0" + formated.toString();
                     }
-
                     if (formated.length === 2){
                         formated = "0," + formated.toString();
                     }
-
                     if (formated != "0,00" && formated.substr(0,2) != ("0,")){
                         formated = formated.substr(formated.search(/[^0]/), formated.length - formated.search(/[^0]/));
                     }
 
                     return formated;
-                }
-
-                function unformat(valor) {
-                    console.log(valor);
-
-                    if (valor != null){
-
-                        if (typeof valor === "number" && valor.toString().length === 1){
-                            valor = valor.toString() + "00";
-                        }
-                        else if (typeof valor === "number" && valor.toString().indexOf(".") >= 0) {
-                            valor = valor.toString().replace(".","");
-                            valor = valor.toString() + "0";
-                        } 
-                        else {
-                            valor = valor.toString().replace(",", "");
-                            valor = parseFloat(valor.toString()).toString();
-                            valor = valor.replace(".","");
-                        }
-                    }
-                    return valor;
                 }
 
                 function setCaretToBegin(input) {
